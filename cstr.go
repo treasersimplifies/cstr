@@ -25,8 +25,8 @@ var AllColors []string = []string{
 	"BlackBeforeSkyWhite", "RedBeforeSkyWhite", "GreenBeforeSkyWhite", "YellowBeforeSkyWhite", "BlueBeforeSkyWhite", "PinkBeforeSkyWhite", "SkyblueBeforeSkyWhite", "WhiteBeforeSkyWhite",
 }
 
-// Dim dims string with single color
-func Dim(str string, style string) string {
+// Dye Dyes string with single color
+func Dye(str string, style string) string {
 	color := strings.Split(style, "Before")
 	if len(color) == 1 {
 
@@ -71,59 +71,59 @@ func Dim(str string, style string) string {
 		}
 	}
 
-	dimLeft := ""
-	dimRight := "\033[0m"
+	dyeLeft := ""
+	dyeRight := "\033[0m"
 	switch color[1] {
 	case "Black":
-		dimLeft = "\033[40;"
+		dyeLeft = "\033[40;"
 	case "Red":
-		dimLeft = "\033[41;"
+		dyeLeft = "\033[41;"
 	case "Green":
-		dimLeft = "\033[42;"
+		dyeLeft = "\033[42;"
 	case "Yellow":
-		dimLeft = "\033[43;"
+		dyeLeft = "\033[43;"
 	case "Blue":
-		dimLeft = "\033[44;"
+		dyeLeft = "\033[44;"
 	case "Pink":
-		dimLeft = "\033[45;"
+		dyeLeft = "\033[45;"
 	case "Skyblue":
-		dimLeft = "\033[46;"
+		dyeLeft = "\033[46;"
 	case "White":
-		dimLeft = "\033[47;"
+		dyeLeft = "\033[47;"
 	default:
 		return str
 	}
 
 	switch color[0] {
 	case "Black":
-		dimLeft += "30m"
+		dyeLeft += "30m"
 	case "Red":
-		dimLeft += "31m"
+		dyeLeft += "31m"
 	case "Green":
-		dimLeft += "32m"
+		dyeLeft += "32m"
 	case "Yellow":
-		dimLeft += "33m"
+		dyeLeft += "33m"
 	case "Blue":
-		dimLeft += "34m"
+		dyeLeft += "34m"
 	case "Pink":
-		dimLeft += "35m"
+		dyeLeft += "35m"
 	case "Skyblue":
-		dimLeft += "36m"
+		dyeLeft += "36m"
 	case "White":
-		dimLeft += "37m"
+		dyeLeft += "37m"
 	default:
 		return str
 	}
 
-	return dimLeft + str + dimRight
+	return dyeLeft + str + dyeRight
 }
 
-// DimColorful .
-func DimColorful(str string, style []string) string {
+// DyeColorfully .
+func DyeColorfully(str string, style []string) string {
 	l := len(style)
 	strc := ""
 	for i, ch := range str {
-		strc += Dim(string(ch), style[i%l])
+		strc += Dye(string(ch), style[i%l])
 	}
 	return strc
 }
@@ -133,7 +133,7 @@ func ShowAllColor() {
 	fmt.Printf("show all colors(currently support %d types): \n", len(AllColors))
 	str := ""
 	for _, v := range AllColors {
-		str += Dim(v+"==>", v)
+		str += Dye(v+"==>", v)
 	}
 	fmt.Println(str)
 }

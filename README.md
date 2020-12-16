@@ -5,7 +5,7 @@ Dim your string with color when printing it.
 ## Usage
 
 ```
-go get -u 
+go get -u github.com/treasersimplifies/cstr
 ```
 
 ## Example
