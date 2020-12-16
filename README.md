@@ -13,7 +13,7 @@ Are you looking for decorations for your command line tool?
 
 ## Example
 
-```
+```shell
 $ git clone git@github.com:treasersimplifies/cstr.git
 $ cd cstr
 $ go test
@@ -29,16 +29,18 @@ To install cstr package, you need to install Go first.
 
 Install cstr:
 
-```
-go get -u github.com/treasersimplifies/cstr
+```shell
+go get github.com/treasersimplifies/cstr
+# or:
+go get -u github.com/treasersimplifies/cstr@master
 ```
 Import cstr in your code:
 
-```
+```go
 import "github.com/treasersimplifies/cstr"
 ```
 
-using in code:
+Use in code:
 
 ```go
 
