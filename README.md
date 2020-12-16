@@ -8,8 +8,12 @@ Are you bored with you single-color command line output text(like the following)
 
 ![](./pics/boring.jpg)
 
-
 Are you looking for decorations for your command line tool?
+
+This package will show you this: 
+
+![](./pics/colorful.jpg)
+
 
 ## Example
 
@@ -21,7 +25,7 @@ $ go test
 
 and you will see:
 
-![](./pics/colorful.jpg)
+![](./pics/demo.jpg)
 
 ## Installation
 
