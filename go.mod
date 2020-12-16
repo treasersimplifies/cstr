@@ -1,4 +1,4 @@
-module cstr
+module github.com/treasersimplifies/cstr
 
 go 1.14
 
